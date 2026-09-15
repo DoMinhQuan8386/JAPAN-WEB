@@ -1,0 +1,511 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --red: #e63946;
+    --dark-red: #b91c2b;
+    --cream: #fffaf4;
+    --pink: #fff1f3;
+    --text: #242124;
+    --gray: #777;
+    --white: #ffffff;
+    --shadow: 0 15px 40px rgba(80, 35, 45, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(
+        180deg,
+        #fffaf4 0%,
+        #ffffff 55%,
+        #fff4f5 100%
+    );
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 18, 23, 0.78),
+            rgba(20, 18, 23, 0.3)
+        ),
+        url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: 12%;
+    top: 15%;
+
+    border-radius: 50%;
+
+    background: #e63946;
+
+    box-shadow:
+        0 0 60px rgba(230, 57, 70, 0.4);
+}
+
+.hero {
+    width: min(1100px, 92%);
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+
+    color: white;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(8px);
+}
+
+.jp-title {
+    font-family: "Yu Mincho", serif;
+
+    font-size: clamp(4rem, 9vw, 7rem);
+
+    font-weight: bold;
+
+    line-height: 0.9;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+
+    color: #f4f4f4;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    width: min(1100px, 92%);
+
+    margin: -35px auto 60px;
+
+    position: relative;
+    z-index: 5;
+}
+
+/* ================= TABS ================= */
+
+.tabs {
+    display: flex;
+    gap: 10px;
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 30px;
+}
+
+.tab {
+    flex: 1;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 15px;
+
+    border-radius: 13px;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    color: #666;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.tab:hover {
+    background: #fff0f1;
+}
+
+.tab.active {
+    background: var(--red);
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(230, 57, 70, 0.25);
+}
+
+/* ================= TITLE ================= */
+
+.section-title {
+    margin: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+}
+
+.section-title h2 {
+    font-size: 1.7rem;
+}
+
+.section-title p {
+    color: var(--gray);
+}
+
+/* ================= KANA GRID ================= */
+
+.kana-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+.kana-card {
+    min-height: 125px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid #f0e5e5;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 6px 20px rgba(60, 30, 40, 0.05);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s,
+        box-shadow 0.18s,
+        border 0.18s;
+}
+
+.kana-card:hover,
+.kana-card.selected {
+    transform: translateY(-5px);
+
+    border-color: rgba(230, 57, 70, 0.5);
+
+    box-shadow:
+        0 12px 28px rgba(230, 57, 70, 0.13);
+}
+
+.kana {
+    font-family:
+        "Yu Mincho",
+        "Noto Serif JP",
+        serif;
+
+    font-size: 3.3rem;
+
+    line-height: 1;
+
+    margin: 8px 0;
+}
+
+.romaji {
+    color: var(--red);
+
+    font-weight: bold;
+}
+
+.meaning {
+    font-size: 0.8rem;
+
+    color: #999;
+
+    margin-top: 4px;
+}
+
+/* ================= PRACTICE ================= */
+
+.practice {
+    margin-top: 45px;
+
+    padding: clamp(22px, 5vw, 45px);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #fff1f3
+        );
+
+    border: 1px solid #f6dddd;
+
+    box-shadow: var(--shadow);
+}
+
+.practice-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.practice-top p {
+    color: var(--gray);
+
+    margin-top: 5px;
+}
+
+.score {
+    padding: 8px 15px;
+
+    border-radius: 50px;
+
+    background: white;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= QUIZ ================= */
+
+.quiz {
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+}
+
+.quiz-label {
+    color: var(--gray);
+
+    margin-bottom: 10px;
+}
+
+#quizKana {
+    font-family:
+        "Yu Mincho",
+        "Noto Serif JP",
+        serif;
+
+    font-size: 7rem;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+/* ================= INPUT ================= */
+
+.input-row {
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 560px;
+
+    margin: auto;
+}
+
+#answer {
+    flex: 1;
+
+    border: 2px solid #eadede;
+
+    border-radius: 13px;
+
+    padding: 15px 17px;
+
+    font-size: 1.05rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+#answer:focus {
+    border-color: var(--red);
+
+    box-shadow:
+        0 0 0 4px rgba(230, 57, 70, 0.1);
+}
+
+/* ================= BUTTON ================= */
+
+.action {
+    border: none;
+
+    border-radius: 13px;
+
+    padding: 0 22px;
+
+    background: var(--red);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.action:hover {
+    background: var(--dark-red);
+
+    transform: translateY(-2px);
+}
+
+.new-btn {
+    margin-top: 18px;
+
+    background: #29252a;
+}
+
+.new-btn:hover {
+    background: #111;
+}
+
+/* ================= FEEDBACK ================= */
+
+#feedback {
+    min-height: 30px;
+
+    margin-top: 16px;
+
+    font-weight: bold;
+}
+
+.correct {
+    color: #18864b;
+}
+
+.wrong {
+    color: var(--red);
+}
+
+.hint {
+    margin-top: 13px;
+
+    color: #999;
+
+    font-size: 0.9rem;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px 50px;
+
+    color: #999;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 750px) {
+
+    .kana-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .action {
+        min-height: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .kana-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .kana-card {
+        min-height: 110px;
+    }
+
+    .kana {
+        font-size: 2.7rem;
+    }
+
+    #quizKana {
+        font-size: 5.5rem;
+    }
+
+    .practice-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+}

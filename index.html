@@ -1,0 +1,230 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>日本語 - Học Hiragana & Katakana</title>
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <div class="hero">
+
+            <div class="badge">
+                🇯🇵 日本語 • Japanese Starter
+            </div>
+
+            <div class="jp-title">
+                あ ア
+            </div>
+
+            <h1>
+                Học tiếng Nhật từ những nét đầu tiên.
+            </h1>
+
+            <p>
+                Làm quen với Hiragana và Katakana,
+                ghi nhớ từng chữ cái và luyện phản xạ
+                bằng trò chơi nhập Romaji.
+            </p>
+
+        </div>
+    </header>
+
+
+    <!-- ================= NỘI DUNG ================= -->
+
+    <main>
+
+        <!-- Chuyển bảng -->
+
+        <div class="tabs">
+
+            <button
+                class="tab active"
+                id="hiraganaTab"
+                onclick="switchTable('hiragana')"
+            >
+                あ Hiragana
+            </button>
+
+            <button
+                class="tab"
+                id="katakanaTab"
+                onclick="switchTable('katakana')"
+            >
+                ア Katakana
+            </button>
+
+        </div>
+
+
+        <!-- ================= BẢNG KANA ================= -->
+
+        <section>
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2 id="tableTitle">
+                        Bảng Hiragana
+                    </h2>
+
+                    <p>
+                        Nhấn vào một ô để xem chữ
+                        và cách đọc.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript sẽ tự tạo các ô chữ ở đây -->
+
+            <div
+                class="kana-grid"
+                id="kanaGrid"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- ================= Ô HỌC THUỘC ================= -->
+
+        <section class="practice">
+
+            <div class="practice-top">
+
+                <div>
+
+                    <h2>
+                        🎌 Ô học thuộc
+                    </h2>
+
+                    <p>
+                        Nhìn chữ Nhật →
+                        nhập Romaji tương ứng.
+                    </p>
+
+                </div>
+
+
+                <!-- Điểm -->
+
+                <div class="score">
+
+                    Điểm:
+                    <span id="score">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Khu vực câu hỏi -->
+
+            <div class="quiz">
+
+                <div
+                    class="quiz-label"
+                    id="quizType"
+                >
+                    Hiragana
+                </div>
+
+
+                <!-- Chữ Nhật được hỏi -->
+
+                <div id="quizKana">
+                    あ
+                </div>
+
+
+                <!-- Nhập đáp án -->
+
+                <div class="input-row">
+
+                    <input
+                        id="answer"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="Nhập Romaji, ví dụ: a"
+                    >
+
+
+                    <button
+                        class="action"
+                        onclick="checkAnswer()"
+                    >
+                        Kiểm tra
+                    </button>
+
+                </div>
+
+
+                <!-- Kết quả -->
+
+                <div id="feedback">
+                </div>
+
+
+                <div class="hint">
+
+                    💡 Mẹo:
+                    Nhấn Enter để kiểm tra.
+
+                </div>
+
+
+                <!-- Câu mới -->
+
+                <button
+                    class="action new-btn"
+                    onclick="newQuestion()"
+                >
+                    Câu tiếp theo →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        Made with ❤️ for Japanese beginners
+
+        <br>
+
+        がんばって！ 🇯🇵
+
+    </footer>
+
+
+    <!-- JavaScript riêng -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
