@@ -1,0 +1,341 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JLPT N5 - Ngữ pháp tiếng Nhật</title>
+
+    <link rel="stylesheet" href="grammar.css">
+</head>
+
+<body>
+
+    <!-- ================= HERO ================= -->
+
+    <header class="grammar-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <a href="index.html" class="back-home">
+                ← Trang chủ
+            </a>
+
+            <div class="japanese-title">
+                日本語 N5
+            </div>
+
+            <h1>
+                Ngữ pháp tiếng Nhật cơ bản
+            </h1>
+
+            <p>
+                Học ngữ pháp N5 từng bước,
+                giải thích dễ hiểu dành cho người Việt.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="grammar-container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="lesson-sidebar">
+
+            <div class="sidebar-header">
+
+                <span>📚</span>
+
+                <div>
+                    <h2>Ngữ pháp N5</h2>
+
+                    <p>
+                        Các bài học cơ bản
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress-box">
+
+                <div class="progress-text">
+
+                    <span>Tiến độ</span>
+
+                    <strong id="progressText">
+                        0 / 12
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressBar"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Danh sách bài -->
+
+            <nav id="lessonList">
+
+                <!-- JavaScript tự tạo -->
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="lesson-content">
+
+            <div class="lesson-image">
+
+                <img
+                    id="lessonImage"
+                    src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1400&q=85"
+                    alt="Phong cảnh Nhật Bản"
+                >
+
+                <div class="image-caption">
+                    🇯🇵 Khám phá tiếng Nhật từng bước
+                </div>
+
+            </div>
+
+
+            <!-- Header bài -->
+
+            <div class="lesson-heading">
+
+                <span id="lessonNumber">
+                    BÀI 01
+                </span>
+
+                <h2 id="lessonTitle">
+                    Câu cơ bản với です
+                </h2>
+
+                <p id="lessonDescription">
+                    Học cách giới thiệu bản thân
+                    và nói "A là B".
+                </p>
+
+            </div>
+
+
+            <!-- ================= CÔNG THỨC ================= -->
+
+            <section class="content-card pattern-card">
+
+                <div class="card-label">
+                    🧩 CÔNG THỨC
+                </div>
+
+                <div
+                    id="lessonPattern"
+                    class="pattern"
+                >
+                    A は B です。
+                </div>
+
+                <div
+                    id="lessonMeaning"
+                    class="translation"
+                >
+                    A là B.
+                </div>
+
+            </section>
+
+
+            <!-- ================= GIẢI THÍCH ================= -->
+
+            <section class="content-card">
+
+                <div class="card-label">
+                    📖 GIẢI THÍCH
+                </div>
+
+                <p id="lessonExplanation">
+                    Mẫu câu này được dùng để nói
+                    A là B hoặc giới thiệu một người,
+                    một vật.
+                </p>
+
+            </section>
+
+
+            <!-- ================= VÍ DỤ ================= -->
+
+            <section class="content-card">
+
+                <div class="card-label">
+                    🇯🇵 VÍ DỤ
+                </div>
+
+                <div id="examplesContainer">
+
+                    <!-- JavaScript tạo ví dụ -->
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= LƯU Ý ================= -->
+
+            <section class="note-card">
+
+                <div class="note-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <strong>
+                        Người Việt cần nhớ
+                    </strong>
+
+                    <p id="lessonNote">
+                        は khi làm trợ từ được đọc là
+                        "wa", không đọc là "ha".
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= QUIZ ================= -->
+
+            <section class="quiz-card">
+
+                <div class="quiz-header">
+
+                    <div>
+
+                        <span>
+                            🎯 LUYỆN TẬP
+                        </span>
+
+                        <h2>
+                            Kiểm tra kiến thức
+                        </h2>
+
+                    </div>
+
+                    <div class="quiz-score">
+
+                        Điểm:
+                        <strong id="quizScore">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="question-box">
+
+                    <p id="questionText">
+                        わたし ___ 学生です。
+                    </p>
+
+                    <div
+                        id="answers"
+                        class="answers"
+                    >
+
+                        <!-- JavaScript -->
+
+                    </div>
+
+                    <div
+                        id="quizFeedback"
+                        class="quiz-feedback"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= NAVIGATION ================= -->
+
+            <div class="lesson-navigation">
+
+                <button
+                    id="previousButton"
+                    class="nav-button secondary"
+                    onclick="previousLesson()"
+                >
+                    ← Bài trước
+                </button>
+
+
+                <button
+                    id="completeButton"
+                    class="nav-button complete"
+                    onclick="completeLesson()"
+                >
+                    ✓ Hoàn thành
+                </button>
+
+
+                <button
+                    id="nextButton"
+                    class="nav-button primary"
+                    onclick="nextLesson()"
+                >
+                    Bài tiếp theo →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-japanese">
+            頑張って！ 🇯🇵
+        </div>
+
+        <p>
+            Cùng nhau học tiếng Nhật N5
+        </p>
+
+    </footer>
+
+
+    <script src="grammar.js"></script>
+
+</body>
+
+</html>
+```
