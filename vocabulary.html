@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>日本語 - Từ vựng N5 theo chủ đề</title>
+
+    <!-- CSS riêng cho từ vựng -->
+    <link rel="stylesheet" href="vocabulary.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="vocab-header">
+
+        <div class="header-content">
+
+            <a href="index.html" class="back-home">
+                ← Trang chủ
+            </a>
+
+            <div class="badge">
+                🇯🇵 日本語 • Japanese Vocabulary
+            </div>
+
+            <div class="jp-title">
+                単語
+            </div>
+
+            <h1>
+                Từ vựng tiếng Nhật N5
+            </h1>
+
+            <p>
+                Học từ vựng tiếng Nhật theo từng chủ đề,
+                dễ hiểu và phù hợp cho người mới bắt đầu.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NỘI DUNG ================= -->
+
+    <main>
+
+        <!-- ================= TIẾN ĐỘ ================= -->
+
+        <section class="progress-section">
+
+            <div class="progress-info">
+
+                <div>
+
+                    <h2>
+                        📚 Tiến độ học tập
+                    </h2>
+
+                    <p>
+                        Từ vựng đã học:
+                        <strong id="learnedCount">0</strong>
+                    </p>
+
+                </div>
+
+                <div class="progress-percent">
+                    <span id="progressPercent">
+                        0%
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHỦ ĐỀ ================= -->
+
+        <section class="topics-section">
+
+            <div class="section-title">
+
+                <span>
+                    JLPT N5
+                </span>
+
+                <h2>
+                    📖 Từ vựng theo chủ đề
+                </h2>
+
+                <p>
+                    Chọn một chủ đề để bắt đầu học.
+                </p>
+
+            </div>
+
+
+            <div
+                class="topics-grid"
+                id="topicsGrid"
+            >
+
+                <!-- JavaScript sẽ tạo các chủ đề ở đây -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KHU VỰC HỌC TỪ ================= -->
+
+        <section
+            class="vocabulary-section"
+            id="vocabularySection"
+        >
+
+            <div class="vocabulary-header">
+
+                <div>
+
+                    <span
+                        class="topic-label"
+                        id="topicLabel"
+                    >
+                        Chủ đề
+                    </span>
+
+                    <h2 id="topicTitle">
+                        Chọn một chủ đề
+                    </h2>
+
+                    <p id="topicDescription">
+                        Chọn một chủ đề phía trên để bắt đầu học từ vựng.
+                    </p>
+
+                </div>
+
+                <div class="topic-count">
+
+                    <span id="topicProgress">
+                        0 / 0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FLASHCARD ================= -->
+
+            <div class="flashcard-container">
+
+                <div
+                    class="flashcard"
+                    id="flashcard"
+                >
+
+                    <div class="flashcard-front">
+
+                        <span class="word-type" id="wordType">
+                            Danh từ
+                        </span>
+
+                        <div
+                            class="japanese-word"
+                            id="japaneseWord"
+                        >
+                            単語
+                        </div>
+
+                        <div
+                            class="word-romaji"
+                            id="wordRomaji"
+                        >
+                            tango
+                        </div>
+
+                        <button
+                            class="show-meaning-button"
+                            id="showMeaningButton"
+                        >
+                            👀 Hiện nghĩa
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="word-meaning"
+                        id="wordMeaning"
+                    >
+                        Nghĩa tiếng Việt
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= NÚT ĐIỀU KHIỂN ================= -->
+
+            <div class="flashcard-controls">
+
+                <button
+                    class="control-button"
+                    id="previousWordButton"
+                >
+                    ← Từ trước
+                </button>
+
+                <button
+                    class="control-button primary"
+                    id="nextWordButton"
+                >
+                    Từ tiếp theo →
+                </button>
+
+            </div>
+
+
+            <!-- ================= PHÁT ÂM ================= -->
+
+            <div class="pronunciation-box">
+
+                <button
+                    class="audio-button"
+                    id="audioButton"
+                >
+                    🔊 Nghe phát âm
+                </button>
+
+                <p>
+                    Mẹo: Hãy đọc theo âm thanh để luyện phát âm.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUIZ ================= -->
+
+        <section class="vocabulary-quiz">
+
+            <div class="quiz-heading">
+
+                <span>
+                    🎯 Luyện tập
+                </span>
+
+                <h2>
+                    Kiểm tra từ vựng
+                </h2>
+
+                <p>
+                    Chọn đáp án đúng cho từ tiếng Nhật.
+                </p>
+
+            </div>
+
+
+            <div class="quiz-card">
+
+                <div
+                    class="quiz-question"
+                    id="vocabQuestion"
+                >
+                    Chọn một chủ đề để bắt đầu.
+                </div>
+
+
+                <div
+                    class="quiz-answers"
+                    id="vocabAnswers"
+                >
+
+                    <!-- JavaScript sẽ tạo đáp án -->
+
+                </div>
+
+
+                <div
+                    class="quiz-feedback"
+                    id="vocabQuizFeedback"
+                >
+                </div>
+
+
+                <div class="quiz-score">
+
+                    Điểm:
+                    <strong id="vocabQuizScore">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="quiz-next-button"
+                    id="nextQuizButton"
+                >
+                    Câu tiếp theo →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DANH SÁCH CHỦ ĐỀ ================= -->
+
+        <section class="all-topics">
+
+            <div class="section-title">
+
+                <span>
+                    N5 Vocabulary
+                </span>
+
+                <h2>
+                    🗂️ Các chủ đề
+                </h2>
+
+                <p>
+                    Tổng hợp các nhóm từ vựng quan trọng.
+                </p>
+
+            </div>
+
+
+            <div class="topic-list">
+
+                <div class="topic-item">
+                    👋
+                    <span>Chào hỏi & giao tiếp</span>
+                </div>
+
+                <div class="topic-item">
+                    👨‍👩‍👧
+                    <span>Gia đình</span>
+                </div>
+
+                <div class="topic-item">
+                    🏫
+                    <span>Trường học</span>
+                </div>
+
+                <div class="topic-item">
+                    🏠
+                    <span>Nhà cửa</span>
+                </div>
+
+                <div class="topic-item">
+                    🍚
+                    <span>Đồ ăn & thức uống</span>
+                </div>
+
+                <div class="topic-item">
+                    🛒
+                    <span>Mua sắm</span>
+                </div>
+
+                <div class="topic-item">
+                    🕐
+                    <span>Thời gian & ngày tháng</span>
+                </div>
+
+                <div class="topic-item">
+                    🚶
+                    <span>Hoạt động hằng ngày</span>
+                </div>
+
+                <div class="topic-item">
+                    🚉
+                    <span>Giao thông</span>
+                </div>
+
+                <div class="topic-item">
+                    🌤️
+                    <span>Thời tiết</span>
+                </div>
+
+                <div class="topic-item">
+                    🎨
+                    <span>Màu sắc</span>
+                </div>
+
+                <div class="topic-item">
+                    🔢
+                    <span>Số đếm</span>
+                </div>
+
+                <div class="topic-item">
+                    💼
+                    <span>Công việc</span>
+                </div>
+
+                <div class="topic-item">
+                    📍
+                    <span>Địa điểm</span>
+                </div>
+
+                <div class="topic-item">
+                    🧑
+                    <span>Con người & cơ thể</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        Made with ❤️ for Japanese beginners
+
+        <br>
+
+        がんばって！ 🇯🇵
+
+    </footer>
+
+
+    <!-- JavaScript riêng -->
+
+    <script src="vocabulary.js"></script>
+
+</body>
+
+</html>

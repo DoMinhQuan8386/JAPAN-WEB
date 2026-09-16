@@ -1,0 +1,842 @@
+/* =========================
+   CÀI ĐẶT CHUNG
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fffaf7;
+    color: #333;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.vocab-header {
+    background:
+        linear-gradient(
+            rgba(90, 20, 30, 0.78),
+            rgba(90, 20, 30, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    padding: 30px 20px 80px;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.back-home {
+    display: inline-block;
+    margin-bottom: 35px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+
+    font-size: 14px;
+}
+
+.jp-title {
+    margin: 25px 0 5px;
+
+    font-size: 65px;
+    font-family: "Yu Mincho", "Noto Serif JP", serif;
+}
+
+.vocab-header h1 {
+    margin: 0 0 15px;
+
+    font-size: 42px;
+}
+
+.vocab-header p {
+    max-width: 650px;
+    margin: auto;
+
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   TIẾN ĐỘ
+========================= */
+
+.progress-section {
+    margin-bottom: 55px;
+
+    padding: 25px 30px;
+
+    background: white;
+
+    border: 1px solid #f0d8dc;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.progress-info h2 {
+    margin: 0 0 8px;
+}
+
+.progress-info p {
+    margin: 0;
+    color: #777;
+}
+
+.progress-percent {
+    font-size: 28px;
+    font-weight: bold;
+    color: #a52a3a;
+}
+
+.progress-bar {
+    height: 12px;
+
+    margin-top: 20px;
+
+    background: #f3e3e5;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+
+    background: #a52a3a;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================
+   TIÊU ĐỀ SECTION
+========================= */
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    color: #a52a3a;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    margin: 8px 0;
+
+    font-size: 30px;
+}
+
+.section-title p {
+    margin: 0;
+
+    color: #777;
+}
+
+
+/* =========================
+   CHỦ ĐỀ
+========================= */
+
+.topics-section {
+    margin-bottom: 70px;
+}
+
+.topics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.topic-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #efd9dc;
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d99aa5;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+}
+
+.topic-card.active {
+    border: 2px solid #a52a3a;
+
+    background: #fff4f5;
+}
+
+.topic-icon {
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+.topic-card h3 {
+    margin: 0 0 8px;
+
+    font-size: 19px;
+}
+
+.topic-card p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.topic-number {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #a52a3a;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   KHU VỰC FLASHCARD
+========================= */
+
+.vocabulary-section {
+    margin-bottom: 70px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.07);
+}
+
+.vocabulary-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.topic-label {
+    color: #a52a3a;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.vocabulary-header h2 {
+    margin: 8px 0;
+
+    font-size: 30px;
+}
+
+.vocabulary-header p {
+    margin: 0;
+
+    color: #777;
+}
+
+.topic-count {
+    min-width: 80px;
+
+    padding: 10px 15px;
+
+    text-align: center;
+
+    background: #fff1f3;
+
+    color: #a52a3a;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FLASHCARD
+========================= */
+
+.flashcard-container {
+    display: flex;
+    justify-content: center;
+
+    margin: 35px 0;
+}
+
+.flashcard {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffafa,
+            #fff0f2
+        );
+
+    border: 2px solid #f0d4d8;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.08);
+}
+
+.word-type {
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    padding: 6px 12px;
+
+    background: #a52a3a;
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+.japanese-word {
+    font-family:
+        "Yu Mincho",
+        "Noto Serif JP",
+        serif;
+
+    font-size: 75px;
+
+    color: #7f1f2d;
+
+    margin-bottom: 10px;
+}
+
+.word-romaji {
+    font-size: 20px;
+
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+.show-meaning-button {
+    padding: 11px 20px;
+
+    background: white;
+
+    border: 1px solid #d9a6ae;
+
+    color: #a52a3a;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.show-meaning-button:hover {
+    background: #fff1f3;
+}
+
+.word-meaning {
+    display: none;
+
+    margin-top: 25px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+.word-meaning.show {
+    display: block;
+}
+
+
+/* =========================
+   NÚT FLASHCARD
+========================= */
+
+.flashcard-controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.control-button {
+    padding: 13px 22px;
+
+    border: 1px solid #d9a6ae;
+
+    background: white;
+
+    color: #8d2635;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.control-button:hover {
+    background: #fff1f3;
+}
+
+.control-button.primary {
+    background: #a52a3a;
+
+    color: white;
+
+    border-color: #a52a3a;
+}
+
+.control-button.primary:hover {
+    background: #7f1f2d;
+}
+
+
+/* =========================
+   PHÁT ÂM
+========================= */
+
+.pronunciation-box {
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.audio-button {
+    padding: 12px 20px;
+
+    border: none;
+
+    background: #fff1f3;
+
+    color: #a52a3a;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.audio-button:hover {
+    background: #f9dfe3;
+}
+
+.pronunciation-box p {
+    margin: 10px 0 0;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.vocabulary-quiz {
+    margin-bottom: 70px;
+}
+
+.quiz-heading {
+    margin-bottom: 25px;
+}
+
+.quiz-heading span {
+    color: #a52a3a;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.quiz-heading h2 {
+    margin: 8px 0;
+
+    font-size: 30px;
+}
+
+.quiz-heading p {
+    margin: 0;
+
+    color: #777;
+}
+
+.quiz-card {
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #efd9dc;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+}
+
+.quiz-question {
+    margin-bottom: 30px;
+
+    font-family:
+        "Yu Mincho",
+        "Noto Serif JP",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #7f1f2d;
+}
+
+.quiz-answers {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.quiz-answer {
+    padding: 15px;
+
+    background: #fffafa;
+
+    border: 1px solid #e7c8cd;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.quiz-answer:hover {
+    background: #fff1f3;
+
+    border-color: #a52a3a;
+}
+
+.quiz-answer.correct {
+    background: #e6f5e9;
+
+    border-color: #67a875;
+}
+
+.quiz-answer.wrong {
+    background: #fbe5e7;
+
+    border-color: #d46b76;
+}
+
+.quiz-feedback {
+    min-height: 30px;
+
+    margin: 20px 0;
+
+    font-weight: bold;
+}
+
+.quiz-score {
+    margin-bottom: 20px;
+
+    color: #666;
+}
+
+.quiz-score strong {
+    color: #a52a3a;
+}
+
+.quiz-next-button {
+    padding: 12px 22px;
+
+    border: none;
+
+    background: #a52a3a;
+
+    color: white;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.quiz-next-button:hover {
+    background: #7f1f2d;
+}
+
+
+/* =========================
+   DANH SÁCH CHỦ ĐỀ
+========================= */
+
+.all-topics {
+    margin-bottom: 30px;
+}
+
+.topic-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.topic-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid #efd9dc;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+}
+
+.topic-item span {
+    color: #555;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 20px;
+
+    background: #5a1420;
+
+    color: white;
+
+    text-align: center;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .topics-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .topic-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .vocab-header {
+        padding-bottom: 60px;
+    }
+
+    .jp-title {
+        font-size: 50px;
+    }
+
+    .vocab-header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .progress-section {
+        padding: 20px;
+    }
+
+    .progress-info {
+        align-items: flex-start;
+    }
+
+    .progress-percent {
+        font-size: 22px;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vocabulary-section {
+        padding: 22px 15px;
+    }
+
+    .vocabulary-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .flashcard {
+        min-height: 300px;
+
+        padding: 25px;
+    }
+
+    .japanese-word {
+        font-size: 55px;
+    }
+
+    .flashcard-controls {
+        flex-direction: column;
+    }
+
+    .control-button {
+        width: 100%;
+    }
+
+    .quiz-card {
+        padding: 25px 15px;
+    }
+
+    .quiz-question {
+        font-size: 32px;
+    }
+
+    .quiz-answers {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-list {
+        grid-template-columns: 1fr;
+    }
+
+}
